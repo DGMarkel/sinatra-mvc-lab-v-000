@@ -5,15 +5,8 @@ class PigLatinizer
   end
 
   def vowel_checker(letter)
-    case letter.downcase
-    when /[aeiou]/
-      true
-    else
-      false
-    end
+    letter.match(/[AEIOUaeiou]/) ? true : false;
   end
-
-
 
   def piglatinize(word)
     if vowel_checker(word[0]) == true
