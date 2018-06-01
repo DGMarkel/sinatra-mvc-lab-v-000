@@ -1,5 +1,5 @@
 class PigLatinizer
-  attr_accessor :word
+  attr_accessor :word, :new_word
 
   def initialize(word)
     @word = word
@@ -14,8 +14,12 @@ class PigLatinizer
       word += "way"
     else
       array = word.split /([aeiou].*)/
-      new_word = array[1] + array[0] + "ay"
+      @new_word = array[1] + array[0] + "ay"
     end
+  end
+
+  def new_word
+    @new_word
   end
 
 end
