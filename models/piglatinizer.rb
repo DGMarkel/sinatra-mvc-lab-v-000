@@ -24,7 +24,7 @@ class PigLatinizer
 
 
   def piglatinize(word)
-    if word[0].scan(/[aeiou]/) != []
+    if is_vowel(word[0])
       word += "way"
     else
       array = word.split /([aeiou].*)/
