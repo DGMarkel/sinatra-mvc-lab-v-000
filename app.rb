@@ -5,5 +5,10 @@ class App < Sinatra::Base
   get '/' do
     erb :user_input
   end
-  
+
+  post '/' do
+    @piglatinized_text = Piglatinizer.new(word)
+
+    erb :results
+  end
 end
