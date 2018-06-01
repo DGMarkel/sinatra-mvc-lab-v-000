@@ -6,15 +6,7 @@ class PigLatinizer
 
   def is_vowel(letter)
     case letter.downcase
-    when "a"
-      true
-    when "e"
-      true
-    when "i"
-      true
-    when "o"
-      true
-    when "u"
+    when /[aeiou]/
       true
     else
       false
