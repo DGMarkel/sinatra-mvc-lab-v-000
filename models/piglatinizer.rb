@@ -16,3 +16,5 @@ class PigLatinizer
       new_word = array[1] + array[0] + "ay"
     end
   end
+
+end
