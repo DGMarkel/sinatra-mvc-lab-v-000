@@ -4,7 +4,7 @@ class PigLatinizer
     @word = word
   end
 
-  def is_vowel(letter)
+  def vowel_checker(letter)
     case letter.downcase
     when /[aeiou]/
       true
@@ -16,7 +16,10 @@ class PigLatinizer
 
 
   def piglatinize(word)
-    if is_vowel(word[0])
+    if vowel_checker(word[0]) == true
       word += "way"
     else
       array = word.split /([aeiou].*)/
+      new_word = array[1] + array[0] + "ay"
+    end
+  end
