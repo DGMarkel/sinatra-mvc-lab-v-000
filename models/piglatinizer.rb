@@ -2,7 +2,6 @@ class PigLatinizer
   attr_accessor :word
 
   def initialize(word)
-    if word.split(" ")
     @word = word
   end
 
