@@ -11,7 +11,7 @@ class PigLatinizer
 
   def piglatinize
       word_array = @word.split(" ")
-      word_array.each do |word|
+      word_array.map do |word|
         if vowel_checker(word[0]) == true
           word += "way"
         else
