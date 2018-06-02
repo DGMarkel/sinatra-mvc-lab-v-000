@@ -1,15 +1,11 @@
 class PigLatinizer
   attr_accessor :word
 
-  def initialize(word)
-    @word = word
-  end
-
   def vowel_checker(letter)
     letter.match(/[AEIOUaeiou]/) ? true : false;
   end
 
-  def piglatinize
+  def piglatinize(word)
       word_array = @word.split(" ")
       piglatinized = word_array.map do |word|
         if vowel_checker(word[0]) == true
