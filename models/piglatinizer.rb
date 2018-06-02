@@ -14,7 +14,7 @@ class PigLatinizer
       @word += "way"
     else
       array = @word.split /([aeiou].*)/
-      (array[1] + array[0]).join("ay")
+      "#{array[1] + array[0])}ay"
     end
   end
 
