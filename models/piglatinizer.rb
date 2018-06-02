@@ -5,8 +5,8 @@ class PigLatinizer
     letter.match(/[AEIOUaeiou]/) ? true : false;
   end
 
-  def piglatinize(word)
-      word_array = @word.split(" ")
+  def piglatinize(words)
+      word_array = words.split(" ")
       piglatinized = word_array.map do |word|
         if vowel_checker(word[0]) == true
           word += "way"
