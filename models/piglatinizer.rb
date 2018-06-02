@@ -10,12 +10,14 @@ class PigLatinizer
   end
 
   def piglatinize
-    if vowel_checker(@word[0]) == true
-      @word += "way"
-    else
-      array = @word.split /([aeiou].*)/
-      "#{array[1] + array[0]}ay"
-    end
+      @word.each do |word|
+        if vowel_checker(word[0]) == true
+          word += "way"
+        else
+          array = word.split /([aeiou].*)/
+          "#{array[1] + array[0]}ay"
+        end
+      end
   end
 
 end
