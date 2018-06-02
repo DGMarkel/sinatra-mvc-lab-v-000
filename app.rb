@@ -1,9 +1,10 @@
 require_relative 'config/environment'
 
 class App < Sinatra::Base
+  attr_reader :words
 
   post '/' do
-    @piglatinized_text = PigLatinizer.new(params[:user_text])
+    @words = PigLatinizer.new(params[:user_text])
     erb :results
   end
 
