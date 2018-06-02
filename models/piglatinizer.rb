@@ -1,5 +1,5 @@
 class PigLatinizer
-  attr_accessor :word, :new_word
+  attr_accessor :word
 
   def initialize(word)
     @word = word
@@ -9,17 +9,13 @@ class PigLatinizer
     letter.match(/[AEIOUaeiou]/) ? true : false;
   end
 
-  def piglatinize(word)
-    if vowel_checker(word[0]) == true
-      word += "way"
+  def piglatinize
+    if vowel_checker(@word[0]) == true
+      @word += "way"
     else
-      array = word.split /([aeiou].*)/
-      @new_word = array[1] + array[0] + "ay"
+      array = @word.split /([aeiou].*)/
+      array[1] + array[0] + "ay"
     end
-  end
-
-  def new_word
-    @new_word
   end
 
 end
